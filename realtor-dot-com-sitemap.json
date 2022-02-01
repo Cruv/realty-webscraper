@@ -1,1 +1,231 @@
-{"_id":"realtor-dot-com","startUrl":["https://www.realtor.com/realestateandhomes-detail/1323-N-15th-St_Lafayette_IN_47904_M44996-96662"],"selectors":[{"delay":0,"id":"price","multiple":false,"parentSelectors":["listing_link"],"regex":"","selector":".list-price div","type":"SelectorText"},{"delay":0,"id":"days_on_market","multiple":false,"parentSelectors":["listing_link"],"regex":"([\\d]{1,3})(?= (Day|Days|Hours))+( (Day|Days|Hours))","selector":"div.listing-summary-info","type":"SelectorText"},{"delay":0,"id":"property_address","multiple":false,"parentSelectors":["listing_link"],"regex":"","selector":"div.address","type":"SelectorText"},{"delay":0,"id":"num_of_bedrooms","multiple":false,"parentSelectors":["listing_link"],"regex":"([\\d]{1})(?=bed)","selector":"div.listing-info","type":"SelectorText"},{"delay":0,"id":"num_of_bathrooms","multiple":false,"parentSelectors":["listing_link"],"regex":"(\\d+(?:\\.\\d{1})?)(?=bath)","selector":"div.listing-info","type":"SelectorText"},{"delay":0,"id":"property_home_size","multiple":false,"parentSelectors":["listing_link"],"regex":"([\\d]{1},[\\d]{3})(?=( square feet))+( square feet)","selector":"div.listing-summary-info","type":"SelectorText"},{"delay":0,"id":"property_lot_size","multiple":false,"parentSelectors":["listing_link"],"regex":"(([\\d]{1},[\\d]{3})|[\\d]\\.[\\d]+)(?=(acre lot|sqft lot))+(acre lot|sqft lot)","selector":"div.listing-summary-info","type":"SelectorText"},{"delay":0,"id":"price_per_sqft","multiple":false,"parentSelectors":["listing_link"],"regex":"(?<=Price per square feet\\$)([\\d]+)","selector":"div.listing-summary-info","type":"SelectorText"},{"delay":0,"id":"property_year_built","multiple":false,"parentSelectors":["listing_link"],"regex":"(?<=Year Built)([\\d]+)","selector":"div.listing-summary-info","type":"SelectorText"},{"delay":0,"id":"property_details","multiple":false,"parentSelectors":["listing_link"],"regex":"","selector":"div.desc","type":"SelectorText"},{"delay":0,"id":"cover_image","multiple":false,"parentSelectors":["listing_link"],"selector":".slick-active img","type":"SelectorImage"},{"delay":0,"id":"listing_link","multiple":true,"parentSelectors":["paginate"],"selector":"a.jsx-1534613990","type":"SelectorLink"},{"id":"paginate","paginationType":"auto","parentSelectors":["_root","paginate"],"selector":"a[aria-label='Go to next page']","type":"SelectorPagination"},{"delay":0,"id":"virtual_tour","multiple":false,"parentSelectors":["listing_link"],"selector":"span.jsx-1199639850","type":"SelectorPopupLink"},{"delay":0,"id":"vimeo_tour","multiple":false,"parentSelectors":["listing_link"],"regex":"https://player.vimeo.com/video/([\\d]+)","selector":"div.dynamic-modal-overlay","type":"SelectorHTML"},{"delay":0,"id":"zillow_3d_tour","multiple":false,"parentSelectors":["listing_link"],"regex":"www.zillow.com\\/view-3d-home\\/[^?]*","selector":"div.dynamic-modal-overlay","type":"SelectorHTML"},{"delay":0,"id":"matterport_tour","multiple":false,"parentSelectors":["listing_link"],"regex":"https:\\/\\/my.matterport.com\\/show\\/[^\\\\]*","selector":"html","type":"SelectorHTML"}]}
+{
+  "_id": "working_prod",
+  "startUrl": [
+    "https://www.realtor.com/realestateandhomes-search/Indiana/type-single-family-home,condo,townhome/shw-vt-3d/nc-hide"
+  ],
+  "selectors": [
+    {
+      "id": "price",
+      "parentSelectors": [
+        "listing_link"
+      ],
+      "type": "SelectorText",
+      "selector": ".list-price div",
+      "multiple": false,
+      "delay": 0,
+      "regex": ""
+    },
+    {
+      "id": "days_on_market",
+      "parentSelectors": [
+        "listing_link"
+      ],
+      "type": "SelectorText",
+      "selector": "div.listing-summary-info",
+      "multiple": false,
+      "delay": 0,
+      "regex": "([\\d]{1,3})(?= (Day|Days|Hours))+( (Day|Days|Hours))"
+    },
+    {
+      "id": "property_address",
+      "parentSelectors": [
+        "listing_link"
+      ],
+      "type": "SelectorText",
+      "selector": "div.address",
+      "multiple": false,
+      "delay": 0,
+      "regex": ""
+    },
+    {
+      "id": "num_of_bedrooms",
+      "parentSelectors": [
+        "listing_link"
+      ],
+      "type": "SelectorText",
+      "selector": "div.listing-info",
+      "multiple": false,
+      "delay": 0,
+      "regex": "([\\d]{1})(?=bed)"
+    },
+    {
+      "id": "num_of_bathrooms",
+      "parentSelectors": [
+        "listing_link"
+      ],
+      "type": "SelectorText",
+      "selector": "div.listing-info",
+      "multiple": false,
+      "delay": 0,
+      "regex": "(\\d+(?:\\.\\d{1})?)(?=bath)"
+    },
+    {
+      "id": "property_home_size",
+      "parentSelectors": [
+        "listing_link"
+      ],
+      "type": "SelectorText",
+      "selector": "div.listing-summary-info",
+      "multiple": false,
+      "delay": 0,
+      "regex": "([\\d]{1},[\\d]{3})(?=( square feet))+( square feet)"
+    },
+    {
+      "id": "property_lot_size",
+      "parentSelectors": [
+        "listing_link"
+      ],
+      "type": "SelectorText",
+      "selector": "div.listing-summary-info",
+      "multiple": false,
+      "delay": 0,
+      "regex": "(([\\d]{1},[\\d]{3})|[\\d]\\.[\\d]+)(?=(acre lot|sqft lot))+(acre lot|sqft lot)"
+    },
+    {
+      "id": "price_per_sqft",
+      "parentSelectors": [
+        "listing_link"
+      ],
+      "type": "SelectorText",
+      "selector": "div.listing-summary-info",
+      "multiple": false,
+      "delay": 0,
+      "regex": "(?<=Price per square feet\\$)([\\d]+)"
+    },
+    {
+      "id": "property_year_built",
+      "parentSelectors": [
+        "listing_link"
+      ],
+      "type": "SelectorText",
+      "selector": "div.listing-summary-info",
+      "multiple": false,
+      "delay": 0,
+      "regex": "(?<=Year Built)([\\d]+)"
+    },
+    {
+      "id": "property_details",
+      "parentSelectors": [
+        "listing_link"
+      ],
+      "type": "SelectorText",
+      "selector": "div.desc",
+      "multiple": false,
+      "delay": 0,
+      "regex": ""
+    },
+    {
+      "id": "cover_image",
+      "parentSelectors": [
+        "listing_link"
+      ],
+      "type": "SelectorImage",
+      "selector": ".slick-active img",
+      "multiple": false,
+      "delay": 0
+    },
+    {
+      "id": "listing_link",
+      "parentSelectors": [
+        "paginate"
+      ],
+      "type": "SelectorLink",
+      "selector": "a.jsx-1534613990",
+      "multiple": true,
+      "delay": 0
+    },
+    {
+      "id": "paginate",
+      "parentSelectors": [
+        "_root",
+        "paginate"
+      ],
+      "paginationType": "auto",
+      "selector": "a[aria-label='Go to next page']",
+      "type": "SelectorPagination"
+    },
+    {
+      "id": "virtual_tour",
+      "parentSelectors": [
+        "listing_link"
+      ],
+      "type": "SelectorPopupLink",
+      "selector": "span.jsx-1199639850",
+      "multiple": false,
+      "delay": 0
+    },
+    {
+      "id": "vimeo_tour",
+      "parentSelectors": [
+        "listing_link"
+      ],
+      "type": "SelectorHTML",
+      "selector": "div.dynamic-modal-overlay",
+      "multiple": false,
+      "regex": "https://player.vimeo.com/video/([\\d]+)",
+      "delay": 0
+    },
+    {
+      "id": "zillow_3d_tour",
+      "parentSelectors": [
+        "listing_link"
+      ],
+      "type": "SelectorHTML",
+      "selector": "div.dynamic-modal-overlay",
+      "multiple": false,
+      "regex": "www.zillow.com\\/view-3d-home\\/[^?]*",
+      "delay": 0
+    },
+    {
+      "id": "matterport_tour",
+      "parentSelectors": [
+        "listing_link"
+      ],
+      "type": "SelectorHTML",
+      "selector": "html",
+      "multiple": false,
+      "regex": "https:\\/\\/my.matterport.com\\/show\\/[^\\\\]*",
+      "delay": 0
+    },
+    {
+      "id": "brivity_tour",
+      "parentSelectors": [
+        "listing_link"
+      ],
+      "type": "SelectorPopupLink",
+      "selector": "span.jsx-1199639850",
+      "multiple": false,
+      "delay": 0
+    },
+    {
+      "id": "distinctiveimagedesigns_tour",
+      "parentSelectors": [
+        "listing_link"
+      ],
+      "type": "SelectorPopupLink",
+      "selector": "span.jsx-1199639850",
+      "multiple": false,
+      "delay": 0
+    },
+    {
+      "id": "property_panoram_tour",
+      "parentSelectors": [
+        "listing_link"
+      ],
+      "type": "SelectorPopupLink",
+      "selector": "span.jsx-1199639850",
+      "multiple": false,
+      "delay": 0
+    },
+    {
+      "id": "corelisting_tour",
+      "parentSelectors": [
+        "listing_link"
+      ],
+      "type": "SelectorPopupLink",
+      "selector": "span.jsx-1199639850",
+      "multiple": false,
+      "delay": 0
+    }
+  ]
+}
